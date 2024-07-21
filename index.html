@@ -1,0 +1,81 @@
+
+<link rel="stylesheet" href="index.css">
+<title>Student Form</title>
+<center>
+<h1> STUDENT FORM</h1>
+
+<div class="one" >
+    <form >
+<table border="3">
+    <tr>
+        <td> Name </td><td><input type="text" id="name"> </td>
+    </tr>
+    <tr>
+        <td>Age</td><td><input type="number" id="age"></td>
+    </tr>
+    <tr>
+        <td> Gender</td><td> <input id="Male"  type="radio" name="Gender">Male <input id="Female" type="radio" name="Gender">Female 
+    </td>
+    </tr>
+    <tr>
+        <td> Course</td>
+        <td>
+            <select id="Course">
+            <option >Python programming
+            </option>
+            <option >C++</option>
+            <option >JavaScript</option> >
+            <option >Java</option> >
+        </select>
+        </td>
+            
+    </tr>
+    <tr>
+        <td> E-mail</td><td><input id="email" type="email"></td>
+    </tr>
+    <tr>
+       <td> <button id="Save" onclick="add(event)">Save</button>
+       </td>
+    </tr>
+</table>
+</form>
+</div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat asperiores placeat reiciendis officiis laborum eos incidunt cumque sit, explicabo ipsum quaerat maiores quod repellat magnam, quidem eaque consectetur consequatur harum?</p>
+
+<div class="two">
+    <form >
+        <table border="4" id="Table">
+            <tr>
+                <td>NAME</td><td>AGE</td><td>COURSE</td><td>GENDER</td><td>EMAIL</td><td>ACTION</td>
+            </tr>
+            
+            
+        </table>
+    </form>
+
+</div>
+</center>
+<script>
+        var Name=document.getElementById("name");
+        var Age=document.getElementById("age");
+        var Male=document.getElementById("Male");
+        var Female=document.getElementById("Female");
+        var Course=document.getElementById("Course");
+        var Save=document.getElementById("Save");
+        var email = document.getElementById("email");
+        var Tables=document.getElementById("Table");
+        function add()
+        {
+            event.preventDefault();
+            var create=document.createElement("tr");
+            create.innerHTML= "<td>" + Name.value + "</td><td>" + Age.value + "</td><td>" + Course.value + "</td><td>" + (Male.checked ? "Male" : "Female") + "</td><td>" + email.value + "</td><td><button onclick='Delete(event,this)'>Delete</button> </td>";
+            Tables.append(create);
+            
+        }
+        function Delete(event,button)
+        {
+            event.preventDefault();
+            var row = button.parentNode.parentNode;
+            row.remove();
+        }
+        
+</script>

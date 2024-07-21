@@ -1,0 +1,28 @@
+h1{
+    color: red;
+    font-style: italic;
+}
+.one{
+    font:status-bar;
+    
+}
+.two{
+    font:status-bar;
+}
+table{
+    border-color: rgb(138, 126, 94);
+    
+}
+.one button{
+    background-color:blue;
+    color: aliceblue;
+    text-align: center; 
+  width: 100%;
+    
+}
+.two button{
+    background-color:red;
+    color: aliceblue;
+    text-align: center; 
+    
+}
